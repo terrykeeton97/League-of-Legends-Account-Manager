@@ -1,0 +1,21 @@
+D:\Projects\Csharp\Auto Login V2\bin\Release\Newtonsoft.Json.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\websocket-sharp.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\YamlDotNet.xml
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.AssemblyReference.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.SuggestedBindingRedirects.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.AddAccount.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.Injector.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.Main.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.Properties.Resources.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.RemoveAccount.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.Settings.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.GenerateResource.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.CoreCompileInputs.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.Fody.CopyLocal.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\League Auto Login.csproj.CopyComplete
+D:\Projects\Csharp\Auto Login V2\bin\Release\League of Legends Account Manager.exe.config
+D:\Projects\Csharp\Auto Login V2\bin\Release\League of Legends Account Manager.exe
+D:\Projects\Csharp\Auto Login V2\bin\Release\League of Legends Account Manager.pdb
+D:\Projects\Csharp\Auto Login V2\obj\Release\League of Legends Account Manager.exe
+D:\Projects\Csharp\Auto Login V2\obj\Release\League of Legends Account Manager.pdb

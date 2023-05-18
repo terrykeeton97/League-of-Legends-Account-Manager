@@ -1,0 +1,21 @@
+D:\Projects\Csharp\Auto Login V2\bin\Release\Auto Login V2.exe.config
+D:\Projects\Csharp\Auto Login V2\bin\Release\Auto Login V2.exe
+D:\Projects\Csharp\Auto Login V2\bin\Release\Auto Login V2.pdb
+D:\Projects\Csharp\Auto Login V2\bin\Release\Newtonsoft.Json.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\websocket-sharp.xml
+D:\Projects\Csharp\Auto Login V2\bin\Release\YamlDotNet.xml
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.AssemblyReference.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.SuggestedBindingRedirects.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.AddAccount.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.Main.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.Properties.Resources.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.RemoveAccount.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.Settings.resources
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.GenerateResource.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.CoreCompileInputs.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.Fody.CopyLocal.cache
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.csproj.CopyComplete
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.exe
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto Login V2.pdb
+D:\Projects\Csharp\Auto Login V2\obj\Release\Auto_Login_V2.UI.RankedSpy.resources
