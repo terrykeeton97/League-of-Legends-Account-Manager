@@ -1,6 +1,7 @@
 <h1 align="center">League of Legends Account Manager</h1>
 
-![auto login github banner](https://github.com/terrykeeton97/League-of-Legends-Account-Manager/assets/116961227/7d03202c-9676-4360-b446-63d53781672e)
+![auto login github banner](https://github.com/terrykeeton97/League-of-Legends-Account-Manager/assets/116961227/6b634db5-0415-4d74-a404-7948f73604a4)
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# Badge"/>
