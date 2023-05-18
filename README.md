@@ -9,7 +9,7 @@
 </p>
 
 # 📖 Project Overview
-From being an owner of multiple accounts, it can be a pain to store them and login. With this tool, you'll be able to store your account information, along with it's rank, wins/losses and other useful statistics. By the click of a button, you can login to it without having to type or remember any credentials. This tool also features R3nzSkin. It will automatically check for the latest version on his GitHub repository and download and inject the latest version. The tool has other useful features you can take advantage of.
+Managing multiple accounts can be a hassle when it comes to storing and logging in. However, with this tool, you can conveniently store your account details, including rank, wins/losses, and other valuable statistics. By simply clicking a button, you can effortlessly log in without the need to manually enter or remember any credentials. Additionally, this tool incorporates R3nzSkin, which automatically checks for the latest version on his GitHub repository, downloads it, and seamlessly injects it. Furthermore, this versatile tool offers various other advantageous features for you to make the most of.
 
 ## 🚀 Getting Started
 1. Open the solution file (.sln).
@@ -17,20 +17,23 @@ From being an owner of multiple accounts, it can be a pain to store them and log
 
 ## 📋 To-do
 ```
-Encrypt the data being saved on the system with a unique key
-Improve the code over-all and make it more efficient
-Add a Champion Select Spy to show summoner names and roles
-Add another form to display useful account information
-Automatically update the ranked data every time the tool is run for current listed accounts
-Add more options and security features to protect data
-Implement an SQL server so users can join servers with listed accounts
+Encrypt the data being saved on the system with a unique key.
+Improve the code overall and make it more efficient.
+Add a Champion Select Spy to show summoner names and roles.
+Add another form to display useful account information.
+Automatically update the ranked data every time the tool is run for currently listed accounts.
+Add more options and security features to protect data.
+Implement an SQL server so users can join servers with listed accounts.
 ```
 
 ## 🧪 Usage
 
 ```
-To add an account, you must first login to the account, next click "Add Account" and it will pull the information for you. 
-Enter your account password and click save.
+Log in to the account you want to add.
+Click on "Add Account" button.
+The tool will automatically retrieve the account information for you.
+Enter your account password.
+Click on "Save" to store the account details.
 ```
 ## Demonstration
 //todo
