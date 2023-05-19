@@ -80,6 +80,7 @@
             this.AccountMap.AllowUserToDeleteRows = false;
             this.AccountMap.AllowUserToResizeColumns = false;
             this.AccountMap.AllowUserToResizeRows = false;
+            this.AccountMap.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.AccountMap.BackgroundColor = System.Drawing.SystemColors.Control;
             this.AccountMap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountMap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -96,6 +97,7 @@
             this.AccountMap.Name = "AccountMap";
             this.AccountMap.RowHeadersVisible = false;
             this.AccountMap.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.AccountMap.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.AccountMap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AccountMap.ShowCellErrors = false;
             this.AccountMap.ShowCellToolTips = false;
@@ -258,6 +260,7 @@
             this.SatusStripContainer.Location = new System.Drawing.Point(0, 281);
             this.SatusStripContainer.Name = "SatusStripContainer";
             this.SatusStripContainer.Size = new System.Drawing.Size(797, 22);
+            this.SatusStripContainer.SizingGrip = false;
             this.SatusStripContainer.TabIndex = 3;
             this.SatusStripContainer.Text = "StatusStripContainer";
             // 
@@ -274,7 +277,7 @@
             // settings
             // 
             this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(180, 22);
+            this.settings.Size = new System.Drawing.Size(117, 22);
             this.settings.Text = "Settings";
             this.settings.Click += new System.EventHandler(this.Settings_Click);
             // 
@@ -288,7 +291,7 @@
             this.launchClient,
             this.loadR3nzSkinMenuItem});
             this.utilities.Name = "utilities";
-            this.utilities.Size = new System.Drawing.Size(180, 22);
+            this.utilities.Size = new System.Drawing.Size(117, 22);
             this.utilities.Text = "Utilities";
             // 
             // clearLogs
@@ -336,7 +339,7 @@
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(180, 22);
+            this.exit.Size = new System.Drawing.Size(117, 22);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.Exit_Click);
             // 

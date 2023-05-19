@@ -12,6 +12,7 @@ using System.Net;
 using System.Net.Http;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using System.Security.Principal;
 
 namespace Acccount_Manager.Classes.Utility
 {
@@ -24,6 +25,13 @@ namespace Acccount_Manager.Classes.Utility
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789/$%^&";
             return new string(Enumerable.Repeat(chars, 16)
                 .Select(s => s[Random.Next(s.Length)]).ToArray());
+        }
+
+        internal static bool IsRunningAsAdministrator()
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
         }
 
         private static readonly string[] ProcessNames =
@@ -74,14 +82,7 @@ namespace Acccount_Manager.Classes.Utility
                     process.Kill();
                     process.WaitForExit();
                 }
-                catch (ArgumentException)
-                {
-                    //do nothing
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Unable to kill processes\n{ex.Message}", GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                catch { }
             }
         }
 
@@ -102,7 +103,7 @@ namespace Acccount_Manager.Classes.Utility
             }
             catch
             {
-                MessageBox.Show("Unable to kill all league processes", GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to kill some league processes", GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

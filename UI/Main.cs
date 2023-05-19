@@ -5,28 +5,19 @@ using Acccount_Manager.Classes.Utility;
 using Acccount_Manager.UI;
 using System;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Account_Manager
 {
     internal partial class Main : Form
     {
-        private static bool isNewInstance;
-        private static readonly Mutex mutex = new Mutex(true, "Auto Login V2", out isNewInstance);
-
         internal Main()
         {
             InitializeComponent();
             Startup.Init(this, AccountMap, SatusStripContainer);
 
-            if (isNewInstance) //check to see if another application is open before we open this. we don't want to confuse the lcu api with the riot client.
-            {
-                mutex.ReleaseMutex();
-                return;
-            }
-            MessageBox.Show("Program is already open in another instance, close that first.", Utils.GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            Environment.Exit(0);           
+            if (!Utils.IsRunningAsAdministrator())
+                MessageBox.Show("You are not running as an Administrator and might encounter unexpected errors or bugs", Utils.GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
 
         private void Exit_Click(object sender, EventArgs e)
