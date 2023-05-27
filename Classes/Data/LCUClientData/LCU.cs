@@ -259,7 +259,6 @@ namespace Acccount_Manager.Classes.Data.LCUClientData
         internal async Task<string> GetAccountUsernameAsync()
         {
             HttpResponseMessage response = await _httpClient.GetAsync($"{_lcuBaseUrl}/lol-login/v1/session");
-
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -272,7 +271,6 @@ namespace Acccount_Manager.Classes.Data.LCUClientData
         internal async Task<string> GetSummonerDisplayName()
         {
             HttpResponseMessage response = await _httpClient.GetAsync($"{_lcuBaseUrl}/lol-summoner/v1/current-summoner");
-
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();

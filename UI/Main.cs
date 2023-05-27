@@ -3,21 +3,35 @@ using Acccount_Manager.Classes.Data;
 using Acccount_Manager.Classes.Data.LCUClientData;
 using Acccount_Manager.Classes.Utility;
 using Acccount_Manager.UI;
+using Account_Manager.Classes.Data;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using kp.Toaster;
 
 namespace Account_Manager
 {
     internal partial class Main : Form
     {
+        internal static LCU lcu = new LCU();
+        internal static DataGridView accountMap;
+        RankedData rankedData = new RankedData();
+
         internal Main()
         {
             InitializeComponent();
-            Startup.Init(this, AccountMap, SatusStripContainer);
+            accountMap = AccountMap;
+            Startup.Init(this, SatusStripContainer);
 
             if (!Utils.IsRunningAsAdministrator())
-                MessageBox.Show("You are not running as an Administrator and might encounter unexpected errors or bugs", Utils.GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                MessageBox.Show("You are not running as an Administrator and might encounter unexpected errors or bugs", Utils.GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (Properties.Settings.Default.updateInformation)
+            {
+                Console.WriteLine("Timer started");
+                RankedDataTimer.Interval = Utils.ConvertToMilliseconds(Properties.Settings.Default.count);
+                RankedDataTimer.Start();
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -128,7 +142,7 @@ namespace Account_Manager
         {
             try
             {
-                await Utils.DownloadAndExtract("R3nzTheCodeGOD", "R3nzSkin", Constants.r3nzData);
+                await Utils.DownloadAndExtract("R3nzTheCodeGOD", "R3nzSkin", Constants.r3nzData, this);
             }
             catch (Exception ex)
             {
@@ -142,6 +156,21 @@ namespace Account_Manager
         private void StartAnotherClientInstanceMenuItem_Click(object sender, EventArgs e)
         {
             Utils.StartAnotherClientInstance();
+        }
+
+        private async void RankedDataTimer_Tick(object sender, EventArgs e)
+        {
+            if (!Utils.IsClientRunning() && !Properties.Settings.Default.updateInformation)
+                return;
+
+            if (RankedDataTimer.Interval != Properties.Settings.Default.count)
+                RankedDataTimer.Interval = Utils.ConvertToMilliseconds(Properties.Settings.Default.count);
+
+            await lcu.ConnectAsync();
+            var summonerName = await lcu.GetSummonerDisplayName();
+            await rankedData.UpdateRankedInfo(await lcu.GetAccountUsernameAsync());
+            lcu.Disconnect();
+            Toast.show(this, "Ranked Stats", $"Updated ranked stats for: {summonerName}", ToastType.INFO, ToastDuration.LONG);
         }
     }
 }

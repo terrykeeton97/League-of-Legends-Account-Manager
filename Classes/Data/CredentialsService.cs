@@ -71,7 +71,7 @@ namespace Acccount_Manager.Classes.Data
                 SaveCredentials();
         }
 
-        private static void SaveCredentials()
+        internal static void SaveCredentials()
         {
             var json = JsonConvert.SerializeObject(Credentials, Formatting.Indented);
             File.WriteAllText(Constants.accountData, json);

@@ -202,24 +202,37 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Toaster.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Toaster.NET.1.0.0\lib\net40\Toaster.NET.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp, Version=1.0.1.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
       <HintPath>packages\WebSocketSharp-netstandard.1.0.1\lib\net45\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="YamlDotNet, Version=13.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
       <HintPath>packages\YamlDotNet.13.1.0\lib\net47\YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="Zeroit.Framework.LineSeparators, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>packages\Zeroit.Framework.LineSeparators.1.0.0\lib\Zeroit.Framework.LineSeparators.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Data\Constants.cs" />
     <Compile Include="Classes\Data\CredentialsService.cs" />
     <Compile Include="Classes\Data\LCUClientData\LCU.cs" />
+    <Compile Include="Classes\Data\RankedData.cs" />
     <Compile Include="Classes\Data\Structs.cs" />
     <Compile Include="Classes\Data\LCUClientData\SummonerInfo.cs" />
     <Compile Include="Classes\Data\YamlObject\LeagueClientSettings.cs" />
     <Compile Include="Classes\Imports.cs" />
     <Compile Include="Classes\Utility\FileManager.cs" />
+    <Compile Include="Classes\Utility\Logger.cs" />
     <Compile Include="Classes\Utility\Startup.cs" />
     <Compile Include="Classes\Utility\Utils.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +265,10 @@
     <Compile Include="UI\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,16 +278,6 @@
     <EmbeddedResource Include="UI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Classes\Utility\LocalClientController.cs" />
     <EmbeddedResource Include="UI\RemoveAccount.resx">
       <DependentUpon>RemoveAccount.cs</DependentUpon>
@@ -278,6 +285,7 @@
     <EmbeddedResource Include="UI\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.AccountMap = new System.Windows.Forms.DataGridView();
             this.usernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,10 +68,12 @@
             this.removeAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.load = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolBar = new System.Windows.Forms.MenuStrip();
-            this.devToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testLoginAccount1RUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testLoginAccount2EUWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RankedDataTimer = new System.Windows.Forms.Timer(this.components);
+            this.timerLabel = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.AccountMap)).BeginInit();
+            this.SatusStripContainer.SuspendLayout();
             this.ToolBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -257,6 +260,8 @@
             // 
             // SatusStripContainer
             // 
+            this.SatusStripContainer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timerLabel});
             this.SatusStripContainer.Location = new System.Drawing.Point(0, 281);
             this.SatusStripContainer.Name = "SatusStripContainer";
             this.SatusStripContainer.Size = new System.Drawing.Size(797, 22);
@@ -379,18 +384,12 @@
             this.ToolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.options,
             this.account,
-            this.load,
-            this.devToolStripMenuItem});
+            this.load});
             this.ToolBar.Location = new System.Drawing.Point(0, 0);
             this.ToolBar.Name = "ToolBar";
             this.ToolBar.Size = new System.Drawing.Size(797, 24);
             this.ToolBar.TabIndex = 2;
             this.ToolBar.Text = "ToolBar";
-            // 
-            // devToolStripMenuItem
-            // 
-            this.devToolStripMenuItem.Name = "devToolStripMenuItem";
-            this.devToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // testLoginAccount1RUToolStripMenuItem
             // 
@@ -402,6 +401,16 @@
             this.testLoginAccount2EUWToolStripMenuItem.Name = "testLoginAccount2EUWToolStripMenuItem";
             this.testLoginAccount2EUWToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
+            // RankedDataTimer
+            // 
+            this.RankedDataTimer.Interval = 600000;
+            this.RankedDataTimer.Tick += new System.EventHandler(this.RankedDataTimer_Tick);
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,13 +420,15 @@
             this.Controls.Add(this.AccountMap);
             this.Controls.Add(this.ToolBar);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ToolBar;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.AccountMap)).EndInit();
+            this.SatusStripContainer.ResumeLayout(false);
+            this.SatusStripContainer.PerformLayout();
             this.ToolBar.ResumeLayout(false);
             this.ToolBar.PerformLayout();
             this.ResumeLayout(false);
@@ -458,7 +469,6 @@
         private System.Windows.Forms.ToolStripMenuItem load;
         private System.Windows.Forms.MenuStrip ToolBar;
         private System.Windows.Forms.ToolStripMenuItem launchClient;
-        private System.Windows.Forms.ToolStripMenuItem devToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testLoginAccount1RUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testLoginAccount2EUWToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadR3nzSkinMenuItem;
@@ -468,6 +478,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn serverColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
         private System.Windows.Forms.ToolStripMenuItem startAnotherClientInstanceMenuItem;
+        private System.Windows.Forms.Timer RankedDataTimer;
+        private System.Windows.Forms.ToolStripStatusLabel timerLabel;
     }
 }
 

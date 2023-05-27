@@ -13,12 +13,20 @@ using System.Net.Http;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Security.Principal;
+using Account_Manager;
+using kp.Toaster;
 
 namespace Acccount_Manager.Classes.Utility
 {
     internal static class Utils
     {
         private static readonly Random Random = new Random();
+
+        internal static int ConvertToMilliseconds(int seconds)
+        {
+            int milliseconds = seconds * 60000;
+            return milliseconds;
+        }
 
         internal static string GenerateString()
         {
@@ -252,20 +260,28 @@ namespace Acccount_Manager.Classes.Utility
 
         internal static async Task<string> GetLatestReleaseVersion(string owner, string repo)
         {
-            string url = $"https://api.github.com/repos/{owner}/{repo}/releases/latest";
-
-            using (HttpClient client = new HttpClient())
+            try
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "request");
+                string url = $"https://api.github.com/repos/{owner}/{repo}/releases/latest";
 
-                string json = await client.GetStringAsync(url);
-                dynamic releaseData = JsonConvert.DeserializeObject(json);
-                string version = releaseData.tag_name;
-                return version;
+                using (HttpClient client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("User-Agent", "request");
+
+                    string json = await client.GetStringAsync(url);
+                    dynamic releaseData = JsonConvert.DeserializeObject(json);
+                    string version = releaseData.tag_name;
+                    return version;
+                }
             }
+            catch
+            {
+
+            }
+            return "";
         }
 
-        internal static async Task DownloadAndExtract(string owner, string repo, string versionFilePath)
+        internal static async Task DownloadAndExtract(string owner, string repo, string versionFilePath, Form main)
         {
             try
             {
@@ -284,15 +300,25 @@ namespace Acccount_Manager.Classes.Utility
 
                 using (WebClient client = new WebClient())
                 {
+                    if (File.Exists(zipFilePath))
+                    {
+                        File.Delete(zipFilePath);
+                        Toast.show(main, "R3nz Skin", "Removing old zip file", ToastType.INFO, ToastDuration.LONG);
+                    }
+
                     await client.DownloadFileTaskAsync(new Uri(downloadUrl), zipFilePath);
 
                     if (File.Exists(dllFilePath))
+                    {
                         File.Delete(dllFilePath);
+                        Toast.show(main, "R3nz Skin", "Removing old dll file", ToastType.INFO, ToastDuration.LONG);
+                    }
 
                     using (ZipArchive archive = ZipFile.Open(zipFilePath, ZipArchiveMode.Read))
                     {
                         ZipArchiveEntry entry = archive.GetEntry("R3nzSkin.dll");
                         entry?.ExtractToFile(Path.Combine(directoryPath, entry.Name), true);
+                        Toast.show(main, "R3nz Skin", $"Updated R3nzSkin to latest version", ToastType.INFO, ToastDuration.LONG);
                     }
 
                     File.WriteAllText(versionFilePath, latestVersion);
@@ -303,6 +329,5 @@ namespace Acccount_Manager.Classes.Utility
                 MessageBox.Show("Unable to download or extract R3nzSkin", GenerateString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
