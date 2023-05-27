@@ -165,6 +165,9 @@ namespace Acccount_Manager.Classes.Data.LCUClientData
 
         internal async Task<bool> ConnectAsync()
         {
+            if (!Utils.IsClientRunning())
+                return false;
+            
             string lockfileContent = await FindLockfilePathAsync();
 
             if (string.IsNullOrEmpty(lockfileContent))
@@ -282,12 +285,6 @@ namespace Acccount_Manager.Classes.Data.LCUClientData
 
         internal async Task<string> FindLockfilePathAsync()
         {
-            while (!Utils.IsClientRunning())
-            {
-                await Task.Delay(1000); // Wait for 1 second before checking again.
-                Console.WriteLine("[FINDLOCKFILEPATHASYNC] - Waiting for client...");
-            }
-
             string installDirectory = LocalClientController.ClientInfo(LocalClientController.ClientInfoType.DirectoryPath);
             string lockfilePath = Path.Combine(installDirectory, "lockfile");
 

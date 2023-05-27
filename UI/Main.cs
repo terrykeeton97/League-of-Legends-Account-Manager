@@ -166,11 +166,15 @@ namespace Account_Manager
             if (RankedDataTimer.Interval != Properties.Settings.Default.count)
                 RankedDataTimer.Interval = Utils.ConvertToMilliseconds(Properties.Settings.Default.count);
 
-            await lcu.ConnectAsync();
-            var summonerName = await lcu.GetSummonerDisplayName();
-            await rankedData.UpdateRankedInfo(await lcu.GetAccountUsernameAsync());
-            lcu.Disconnect();
-            Toast.show(this, "Ranked Stats", $"Updated ranked stats for: {summonerName}", ToastType.INFO, ToastDuration.LONG);
+            if (await lcu.ConnectAsync())
+            {
+                var summonerName = await lcu.GetSummonerDisplayName();
+                await rankedData.UpdateRankedInfo(await lcu.GetAccountUsernameAsync());
+                lcu.Disconnect();
+                Toast.show(this, "Ranked Stats", $"Updated ranked stats for: {summonerName}", ToastType.INFO, ToastDuration.LONG);
+                return;
+            }
+            Toast.show(this, "Error", "Unable to connect to the LCU. Are you logged into an account?", ToastType.ERROR, ToastDuration.INDEFINITE);
         }
     }
 }
