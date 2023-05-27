@@ -58,3 +58,24 @@ C:\Users\Terry\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Rel
 C:\Users\Terry\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.CopyComplete
 C:\Users\Terry\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.exe
 C:\Users\Terry\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.pdb
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\League of Legends Account Manager.exe.config
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\League of Legends Account Manager.exe
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\League of Legends Account Manager.pdb
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\Newtonsoft.Json.xml
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\websocket-sharp.xml
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\bin\Release\YamlDotNet.xml
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.AssemblyReference.cache
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.SuggestedBindingRedirects.cache
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Account_Manager.Properties.Resources.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Acccount_Manager.UI.AddAccount.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Acccount_Manager.UI.Injector.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Account_Manager.Main.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Acccount_Manager.UI.RemoveAccount.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\Acccount_Manager.UI.Settings.resources
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.GenerateResource.cache
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.CoreCompileInputs.cache
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.Fody.CopyLocal.cache
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.csproj.CopyComplete
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.exe
+D:\Special Folders\Desktop\Projects\Csharp\League of Legends Account Manager\obj\Release\League of Legends Account Manager.pdb

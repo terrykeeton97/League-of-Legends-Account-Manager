@@ -318,7 +318,7 @@ namespace Acccount_Manager.Classes.Utility
                     {
                         ZipArchiveEntry entry = archive.GetEntry("R3nzSkin.dll");
                         entry?.ExtractToFile(Path.Combine(directoryPath, entry.Name), true);
-                        Toast.show(main, "R3nz Skin", $"Updated R3nzSkin to latest version", ToastType.INFO, ToastDuration.LONG);
+                        Toast.show(main, "R3nz Skin", "Updated R3nzSkin to latest version", ToastType.INFO, ToastDuration.LONG);
                     }
 
                     File.WriteAllText(versionFilePath, latestVersion);
